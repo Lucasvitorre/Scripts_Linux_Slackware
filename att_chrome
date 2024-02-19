@@ -1,0 +1,12 @@
+#!/bin/bash
+
+cd /home
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+wget https://mirrors.slackware.com/slackware/slackware64-14.2/extra/google-chrome/google-chrome.SlackBuild --no-check-certificate
+
+chmod +x google-chrome.SlackBuild
+
+./google-chrome.SlackBuild
+
+installpkg /tmp/google-chrome--x86_64-1.txz
