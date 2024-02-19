@@ -9,6 +9,3 @@
       copy:
         src: /home/ansible/folders/policies
         dest: /etc/opt/chrome/
-
-     - name: bloquear área de trabalho  
-      command: chmod -x /usr/bin/xfdesktop-settings
