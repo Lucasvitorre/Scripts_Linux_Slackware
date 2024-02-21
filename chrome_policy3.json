@@ -1,8 +1,6 @@
 {
-	"DefaultProfile":
-
-[
-	"enable": true,
-	"username": "Person 1"
-]
+	"DefaultProfile": {
+		"enable": true,
+		"username": "Person 1"
+	}
 }
