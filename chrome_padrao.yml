@@ -2,10 +2,12 @@
   become: true
   become_method: su
   
-
   tasks:
     
     - name: copia pasta policies
       copy:
         src: /home/ansible/folders/policies
         dest: /etc/opt/chrome/
+
+     - name: bloquear área de trabalho  
+      command: chmod -x /usr/bin/xfdesktop-settings

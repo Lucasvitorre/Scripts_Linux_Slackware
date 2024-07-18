@@ -1,0 +1,28 @@
+---
+##exemplo
+- hosts: hosts
+  become: true
+  become_method: su
+  tasks: 
+    - name: copia arquivos de instalacao
+      copy:
+        src: /home/ansible/files/google-chrome-stable_current_amd64.deb
+        dest: /home/
+
+    - name: copia source
+      copy:
+        src: /home/ansible/folders/chrome
+        dest: /home/
+
+    - name: permissao slackbuild
+      command: chmod +x /home/chrome/google-chrome.SlackBuild
+    
+    - name: instala slackbuild
+      command: sh /home/chrome/google-chrome.SlackBuild
+
+    - name: instala google .txz
+      command: installpkg /tmp/google-chrome-114.0.5735.133-x86_64-1.txz
+    
+    - name: remove arquivos chrome
+      command: rm -r /home/google-chrome-stable_current_amd64.deb
+      command: rm -r /home/chrome  
